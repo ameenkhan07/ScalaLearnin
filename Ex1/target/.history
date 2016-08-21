@@ -1,0 +1,11 @@
+run
+run main.scala
+run main.scala 1
+run
+run 1
+run
+run 1
+run 10
+run 3
+run 3;
+run 3
