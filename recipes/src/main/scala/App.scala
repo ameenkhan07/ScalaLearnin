@@ -46,12 +46,29 @@ class Pizza (var crustSize: Int, var crustType: String) {
 	override def toString = s"A $crustSize inch pizza with a $crustType crust"
 }
 
+// Companion Object : Static values and methods like in Java/C++
 object Pizza {
 	val DEFAULT_CRUST_SIZE = 12
 	val DEFAULT_CRUST_TYPE = "THIN"
 }
 
+class Foo {
+	// set 'text' equal to the result of the block of code
+	val text = {
+		var lines = ""
+		try {
+			lines = io.Source.fromFile("/etc/passwd").getLines.mkString
+		} 
+		catch {
+			case e: Exception => lines = "Error happened"
+		}
+		lines
+	}
+	println(text)
+}
+
 object HelloWorld extends App {
+	
 	val p = new Person("Randal", "Rudolph")
 	p.printHome
 	p.printFullName
@@ -64,4 +81,8 @@ object HelloWorld extends App {
 	println(p1)
 	println(p2)
 	println(p3)
+
+	lazy val f = new Foo
+	f
 }
+
