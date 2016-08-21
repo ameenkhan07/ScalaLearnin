@@ -1,3 +1,5 @@
+package ameenkhan07.recipes
+
 
 class Foo {
 	// set 'text' equal to the result of the block of code
