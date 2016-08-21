@@ -1,7 +1,8 @@
 package ameenkhan07.recipes
 
 object Main extends App {
-	
+
+//Person..scala	
 	// val p = Person("alvinalexander", "secret")
 	// p.address = Some(Address("Talkeetna", "AK", "99676"))
 	// p.firstName = "Randall"
@@ -19,6 +20,7 @@ object Main extends App {
 	val teresa = new Employee("Teresa", "secret",Address("Louisville", "KY","110025"), 25)
 	println(teresa)
 
+//Pizza.scala
 	val  p1 = new Pizza(Pizza.DEFAULT_CRUST_SIZE, Pizza.DEFAULT_CRUST_TYPE)
 	val  p2 = new Pizza(Pizza.DEFAULT_CRUST_SIZE)
 	val  p3 = new Pizza(Pizza.DEFAULT_CRUST_TYPE)
@@ -26,6 +28,18 @@ object Main extends App {
 	println(p2)
 	println(p3)
 
+// Foo.scala
 	lazy val f = new Foo
+
+
+//Pet.scala
+	val dog = new Dog2("Fido")
+	val cat = new Cat2("Morris")
+	dog.sayHello
+	cat.sayHello
+	println(dog)
+	println(cat)
+	cat.age = 10
+	println(cat)
 }
 

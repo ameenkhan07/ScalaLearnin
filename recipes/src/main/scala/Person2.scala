@@ -20,12 +20,12 @@ class Person2 (var name: String, var address: Address) {
 	override def toString = if (address == null) name else s"$name @ $address"
 }
 
-class Employee2 (name: String, role: Role, address: Address) extends Person2 (name, address) {
+class Employee2 (name: String, role: Role2, address: Address) extends Person2 (name, address) {
 
 	def this (name: String) {
 	this(name, null, null)
 	}
-	def this (name: String, role: Role) {
+	def this (name: String, role: Role2) {
 		this(name, role, null)
 	}
 	def this (name: String, address: Address) {
