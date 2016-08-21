@@ -12,10 +12,10 @@ trait Father extends Human {
 	override def hello = "Father"
 }
 
-Child extends Human with Mother with Father {
-	printSuper = super.hello
-	printMother = super[Mother].hello
-	printFather = super[Father].hello
-	printHuman = super[Human].hello
+class Child extends Human with Mother with Father {
+	def printSuper = super.hello
+	def printMother = super[Mother].hello
+	def printFather = super[Father].hello
+	def printHuman = super[Human].hello
 }
 

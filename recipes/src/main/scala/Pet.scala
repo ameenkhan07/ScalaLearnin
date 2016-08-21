@@ -16,7 +16,7 @@ abstract class Pet (name: String) {
 	def sayHello() = { 
 		println(greeting) 
 	}
-	def run 
+	def run():Unit
 	override def toString = s"I say $greeting, and I'm $age"
 }
 
@@ -25,10 +25,12 @@ abstract class Pet (name: String) {
 class Dog2 (name: String) extends Pet (name) {
 	override val greeting = "Woof"
 	var age = 2
-	def run { println("Dog is running") }
+	def run()= { println("Dog is running") }
 }
 
 class Cat2 (name: String) extends Pet (name) {
-	val greeting = "Meow"
+	override val greeting = "Meow"
 	var age = 5
+	def run()= { println("Cats are lazy shits. they dont run") }
+
 }
