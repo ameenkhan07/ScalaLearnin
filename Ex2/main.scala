@@ -23,11 +23,19 @@ class InnoString(s:String){
 		x
 	}
 
+	def palindrome():Boolean = {
+		var str2:String = str.reverse
+		if(str2==str) return true
+		else false
+	}
+
+
 }
 
 object Mainer extends App{
 	var obj = new InnoString("ameen")
+	var obj2 = new InnoString("akka")
 	println(obj.concat("rascal"))
-	// println("mahalo")
-	// println(obj.toString)
+	println(obj.palindrome())
+	println(obj2.palindrome())
 }
