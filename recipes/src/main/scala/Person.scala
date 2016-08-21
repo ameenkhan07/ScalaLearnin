@@ -5,22 +5,22 @@ package ameenkhan07.recipes
 // constructors must always call a previously defined constructor in the
 // same class, auxiliary constructors will also execute the same code.
 
-case class Person(var username: String, var password: String) {
+case class Person(var username: String, var password: String, var address:Address) {
 	
 	private val HOME = System.getProperty("user.home")
 
 	var firstName = ""
 	var lastName = ""
-	var address = None: Option[Address]
-	var age = 0
+	// var address = None: Option[Address]
+	// var age = 0
 	
-	var add = address.foreach { a =>
-		println(a.city)
-		println(a.state)
-		println(a.zip)
-	}
+	// var add = address.foreach { a =>
+	// 	println(a.city)
+	// 	println(a.state)
+	// 	println(a.zip)
+	// }
 
-	override def toString = if (address == null) username else s"$firstName @ $add"
+	override def toString = if (address == null) username else s"$firstName @ $address"
 	// override def toString = s"$firstName $lastName is $age years old"//overriding the `this` object getter
 
 	def printHome() = { 
@@ -29,12 +29,15 @@ case class Person(var username: String, var password: String) {
 
 	def printFullName() = { 
 		println(this) 
-	} // uses toString
+	}
 }
 
-
 case class Address(city: String, state: String, zip: String) {
-
 	override def toString = s"Address :\n$city \n$state \n$zip"
+}
 
+class Employee (name: String, password: String, address: Address, var age: Int) extends Person (name, password, address) {
+// rest of the class
+
+	override def toString = s"Employee $name, aged $age."
 }
