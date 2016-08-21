@@ -41,5 +41,14 @@ object Main extends App {
 	println(cat)
 	cat.age = 10
 	println(cat)
+
+
+//Humans.scala
+	val c = new Child
+	println(s"c.printSuper = ${c.printSuper}")
+	println(s"c.printMother = ${c.printMother}")
+	println(s"c.printFather = ${c.printFather}")
+	println(s"c.printHuman = ${c.printHuman}")
+
 }
 
